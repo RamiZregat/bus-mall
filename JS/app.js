@@ -1,7 +1,7 @@
 'use strict';
 
 let counter = 0;
-let attempts = 25;
+let attempts = 24;
 
 function BusMall(name, source,) {
     this.name = name
