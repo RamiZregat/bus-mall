@@ -132,6 +132,7 @@ function handleclick(event) {
 
         function btnclick() {
             renderlist();
+            btn.remove
         }
     }
 }
