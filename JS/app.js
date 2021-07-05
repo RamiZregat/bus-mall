@@ -2,6 +2,10 @@
 
 let counter = 0;
 let attempts = 24;
+let namearray=[];
+let votearray=[];
+let shownarray=[];
+let previousimagesarray=[];
 
 function BusMall(name, source,) {
     this.name = name
@@ -67,14 +71,21 @@ rightimg.setAttribute('id', 'rightimg');
 BusMall.DataArray[rightimgnumber].shown++;
 
 function renderimages() {
+    previousimagesarray=[];
+    previousimagesarray.push(leftimgnumber);
+    previousimagesarray.push(midimgnumber);
+    previousimagesarray.push(rightimgnumber);
+
     leftimgnumber = randomnumber();
     midimgnumber = randomnumber();
     rightimgnumber = randomnumber();
 
-    while (leftimgnumber === midimgnumber || leftimgnumber === rightimgnumber || midimgnumber === rightimgnumber) {
+    while (leftimgnumber === midimgnumber || leftimgnumber === rightimgnumber || midimgnumber === rightimgnumber|| previousimagesarray.includes(leftimgnumber)|| previousimagesarray.includes(midimgnumber)||previousimagesarray.includes(rightimgnumber) ) {
         leftimgnumber = randomnumber();
         midimgnumber = randomnumber();
+        rightimgnumber=randomnumber();
     }
+
 
     leftimg.src = BusMall.DataArray[leftimgnumber].source
     BusMall.DataArray[leftimgnumber].shown++;
@@ -132,7 +143,8 @@ function handleclick(event) {
 
         function btnclick() {
             renderlist();
-            btn.remove
+            char();
+            btn.removeEventListener('click',btnclick);
         }
     }
 }
@@ -145,6 +157,40 @@ function renderlist() {
         const li = document.createElement('li')
         ul.appendChild(li)
         li.textContent = `${BusMall.DataArray[i].name} had ${BusMall.DataArray[i].votes} votes, and  was seen ${BusMall.DataArray[i].shown} times`
+        namearray[i]=BusMall.DataArray[i].name
+        votearray[i]=BusMall.DataArray[i].votes
+        shownarray[i]=BusMall.DataArray[i].shown
     }
 }
 
+function char(){
+var ctx = document.getElementById('myChart');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: namearray,
+        datasets: [{
+            label: '# of Votes',
+            data: votearray,
+            backgroundColor: [
+                'rgba(153, 102, 255, 0.514)',
+            ],
+            borderColor: [
+                'rgba(153, 102, 255, 1)',
+            ],
+            borderWidth: 1
+        }
+        ,{
+            label: '# of Shown',
+            data: shownarray,
+            backgroundColor: [
+                '#a7194baf',
+            ],
+            borderColor: [
+                '#85143b',
+            ],
+            borderWidth: 1
+        }]
+    },
+});
+}
