@@ -1,7 +1,7 @@
 'use strict';
 
-let counter = 0;
-let attempts = 2;
+let counter = 1;
+let attempts = 10;
 let namearray=[];
 let votearray=[];
 let shownarray=[];
@@ -35,7 +35,7 @@ new BusMall('tauntaun', 'images/tauntaun.jpg');
 new BusMall('unicorn', 'images/unicorn.jpg');
 new BusMall('water-can', 'images/water-can.jpg');
 new BusMall('wine-glass', 'images/wine-glass.jpg');
-
+getData();
 
 function randomnumber() {
     return Math.floor(Math.random() * BusMall.DataArray.length)
@@ -108,12 +108,15 @@ function handleclick(event) {
 
         if (event.target.id === 'leftimg') {
             BusMall.DataArray[leftimgnumber].votes++
+
         }
         if (event.target.id === 'midimg') {
             BusMall.DataArray[midimgnumber].votes++
+
         }
         if (event.target.id === 'rightimg') {
             BusMall.DataArray[rightimgnumber].votes++
+
         }
 
         renderimages();
@@ -124,12 +127,15 @@ function handleclick(event) {
 
         if (event.target.id === 'leftimg') {
             BusMall.DataArray[leftimgnumber].votes++
+
         }
         if (event.target.id === 'midimg') {
             BusMall.DataArray[midimgnumber].votes++
+
         }
         if (event.target.id === 'rightimg') {
             BusMall.DataArray[rightimgnumber].votes++
+
         }
 
         leftimg.removeEventListener('click', handleclick);
@@ -142,6 +148,8 @@ function handleclick(event) {
         btn.addEventListener('click', btnclick)
 
         function btnclick() {
+            seclist.setAttribute('style','background-color: #eb0e3a17;')
+            storageData();
             renderlist();
             char();
             let holder=document.getElementById('holder')
@@ -199,4 +207,16 @@ var myChart = new Chart(ctx, {
         }]
     },
 });
+}
+function storageData(){
+let DataStringify=JSON.stringify(BusMall.DataArray)
+localStorage.setItem('Bus-Mall',DataStringify)
+}
+
+function getData(){
+    let GettingData=localStorage.getItem('Bus-Mall')
+    let DataPrase=JSON.parse(GettingData)
+if(DataPrase!==null){
+BusMall.DataArray=DataPrase
+}
 }

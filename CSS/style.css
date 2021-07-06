@@ -7,8 +7,9 @@ body{
 #sec-img img{
     width: 300px;
     height: 300px;
-    margin-top: 150px;
+    margin-top: 80px;
     margin-left: 66px;
+    margin-bottom: 60px;
     float:left;
     border: 1px solid #ddd;
     border-radius: 17px;
@@ -17,12 +18,11 @@ body{
 }
 #list{
     float:right;
-    margin-right: 40px;
-    margin-top:150px;
+    margin-right: 90px;
+    margin-top:80px;
     line-height: 36px;
     font-size: 23px;
     color: rgb(158, 19, 47);
-    background-color: #eb0e3a17;
     padding: 20px 35px;
     border-bottom-right-radius: 40px;
     border-top-right-radius: 40px;
@@ -30,8 +30,8 @@ body{
 }
 #list button{
     position:absolute;
-    top:580px;
-    right:750px;
+    top:620px;
+    right:790px;
     width: 80px;
     height: 45px;
     color: brown;
@@ -41,14 +41,14 @@ body{
 }
 div{
     width: 600px;
-    padding-top: 550px;
+    padding-top: 200px;
     padding-left: 50px;
 }
 #gif{
     position: absolute;
     width: 300px;
     left: 700px;
-    top: 570px;
+    top: 620px;
     margin: 0;
     padding: 0;
     border: 1px solid #ddd;
@@ -56,5 +56,32 @@ div{
     padding: 15px;
     background-color: rgba(158, 19, 47, 0.253);
 }
+footer{
+    background-color: #eb0e3a17;
+    color: rgb(158, 19, 47);
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Otomanopee One', sans-serif;
 
+}
+header{
+    background-color: #eb0e3a17;
+    color: rgb(158, 19, 47);
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Otomanopee One', sans-serif;
+    font-size: 30px;
+
+}
+#h2{
+    margin-left: 66px;
+    margin-top: 50px;
+    color: rgb(158, 19, 47);
+    font-size: 20px;
+    font-family: 'Otomanopee One', sans-serif;
+    border-bottom:solid #eb0e3a41 ;
+    margin-right: 976px;
+    padding-bottom: 10px;
+
+}
 
