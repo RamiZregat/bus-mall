@@ -3,6 +3,8 @@
   }
 body{
     background-color: #ffe0e6d2;
+    width: 100%;
+    min-height: 100%;
 }
 #sec-img img{
     width: 300px;
@@ -45,11 +47,8 @@ div{
     padding-left: 50px;
 }
 #gif{
-    position: absolute;
     width: 300px;
-    left: 700px;
-    top: 620px;
-    margin: 0;
+    margin-left: 630px;
     padding: 0;
     border: 1px solid #ddd;
     border-radius: 17px;
@@ -60,9 +59,17 @@ footer{
     background-color: #eb0e3a17;
     color: rgb(158, 19, 47);
     text-align: center;
-    padding: 20px 0;
+    clear: both;
+    position: relative;
+    height: 65px;
+    margin-top: 400px;
+    width: 100%;
     font-family: 'Otomanopee One', sans-serif;
 
+
+}
+footer h2{
+    padding: 20px 0;
 }
 header{
     background-color: #eb0e3a17;
@@ -84,4 +91,6 @@ h1{
     padding-bottom: 10px;
 
 }
-
+#holder{
+    margin-top: -450px;
+}
