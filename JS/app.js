@@ -1,7 +1,7 @@
 'use strict';
 
 let counter = 1;
-let attempts = 10;
+let attempts = 25;
 let namearray=[];
 let votearray=[];
 let shownarray=[];
