@@ -1,7 +1,7 @@
 'use strict';
 
 let counter = 0;
-let attempts = 24;
+let attempts = 2;
 let namearray=[];
 let votearray=[];
 let shownarray=[];
@@ -144,7 +144,13 @@ function handleclick(event) {
         function btnclick() {
             renderlist();
             char();
+            let holder=document.getElementById('holder')
+            let img=document.createElement('img')
+            holder.appendChild(img)
+            img.setAttribute('src','images/choices.gif')
+            img.setAttribute('id','gif')
             btn.removeEventListener('click',btnclick);
+
         }
     }
 }
