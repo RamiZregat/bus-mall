@@ -152,11 +152,11 @@ function handleclick(event) {
             storageData();
             renderlist();
             char();
-            let holder=document.getElementById('holder')
-            let img=document.createElement('img')
-            holder.appendChild(img)
-            img.setAttribute('src','images/choices.gif')
-            img.setAttribute('id','gif')
+            // let holder=document.getElementById('holder')
+            // let img=document.createElement('img')
+            // holder.appendChild(img)
+            // img.setAttribute('src','images/choices.gif')
+            // img.setAttribute('id','gif')
             btn.removeEventListener('click',btnclick);
 
         }
@@ -220,3 +220,4 @@ if(DataPrase!==null){
 BusMall.DataArray=DataPrase
 }
 }
+
