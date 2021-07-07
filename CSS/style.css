@@ -17,6 +17,12 @@ body{
     border-radius: 17px;
     padding: 15px;
     background-color: rgb(158, 19, 47);
+    transition:0.5s;
+}
+#leftimg:hover,#midimg:hover,#rightimg:hover{
+    background-color: #eb0e3a3d;
+    width: 320px;
+    height: 320px;
 }
 #list{
     float:right;
@@ -29,6 +35,7 @@ body{
     border-bottom-right-radius: 40px;
     border-top-right-radius: 40px;
     font-family: 'Otomanopee One', sans-serif;
+    box-shadow: black;
 }
 #list button{
     position:absolute;
@@ -60,10 +67,10 @@ footer{
     color: rgb(158, 19, 47);
     text-align: center;
     clear: both;
-    position: relative;
+    position: absolute;
     height: 65px;
-    margin-top: 400px;
     width: 100%;
+    bottom: -10%;
     font-family: 'Otomanopee One', sans-serif;
 
 
